@@ -1,0 +1,32 @@
+#img-spn {
+  margin-top: 40px;
+  width: 90%;
+}
+#img-george-book {
+  margin: -20px 0 0 -40px !important;
+  width: 70%;
+}
+#img-george-flower {
+  margin: 0 0 0 0 !important;
+}
+p {
+  text-align: left;
+}
+ul {
+  font-size: 28pt !important;
+}
+.cite {
+  display: block;
+  text-align: left;
+  margin: 40px 0 0 0 !important;
+  font-size: 12pt !important;
+}
+.row {
+  display: flex;
+}
+.column-left {
+  flex: 55%;
+}
+.column-right {
+  flex: 45%;
+}

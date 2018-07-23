@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Research Summary</title>
+
+    <link rel="stylesheet" href="css/reveal.my.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>Research statement</h3>
+          <h4>Kousuke Ariga</h4>
+          <p>My goal is to enable robots to acquire an semantic understanding of the world independently through autonomous exploration.</p>
+          <div class="row">
+            <div class="column-left">
+              <p>To this end, I work on a combination of probabilistic modeling and robot vision.</p>
+            </div>
+            <div class="column-right">
+              <img id="img-george-book" data-src="imgs/george_book.jpg">
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>Probabilistic models of the world</h3>
+          <div class="row">
+            <div class="column-left">
+              <p>Sum-Product Networks represent high-deminsional probablility distribution by a computational graph.</p>
+                <ul>
+                  <li>Tractable exact inference of marginals and modes</li>
+                  <li>More general than tractable graphical models</li>
+                </ul>
+            </div>
+            <div class="column-right">
+              <img id="img-spn" data-src="imgs/spn.png">
+            </div>
+          </div>
+          <span class="cite">[1] K. Ariga. Semi-Supervised Spatial Knowledge Transfer with Deep Generative Models. Senior Thesis, 2017.</span>
+        </section>
+        <section>
+          <h3>Robot vision dataset</h3>
+          <img id="img-spn" data-src="imgs/stockholm.png">
+          <p>Place scans are the robo-centric view of the world.</p>
+          <p>We model the geometry and the semantics of places together by using the reconstructed occupancy map.</p>
+          <span class="cite">[2] K. Ariga, K. Zheng, and A. Pronobis. Probabilistic deep learning framework for semantic mapping with mobile robots. In Procecedings of the 10th Undergraduate Research Symposium, 2017.</span>
+        </section>
+        <section>
+          <h3>Generative active learning</h3>
+          <p>How can we make robots to learn independently?</p>
+          <img id="img-george-flower" data-src="imgs/george_flower.jpg">
+          <p>Autonomous exploration and pool-based active learning, where robots cleverly select a few samples from a pool of unlabeled data to ask humans for the ground truth label, seems to be a great match.</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
